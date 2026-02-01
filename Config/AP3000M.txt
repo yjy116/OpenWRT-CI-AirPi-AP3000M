@@ -1,0 +1,16 @@
+# ===== Target: mediatek/filogic + AirPi AP3000M =====
+CONFIG_TARGET_mediatek=y
+CONFIG_TARGET_mediatek_filogic=y
+CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_airpi_ap3000m=y
+
+# ===== FM350-GL main (UI + backend) =====
+CONFIG_PACKAGE_fm350-modem=y
+CONFIG_PACKAGE_luci-proto-fm350=y
+
+# ===== Full UI: modemband =====
+CONFIG_PACKAGE_modemband=y
+CONFIG_PACKAGE_luci-app-modemband=y
+
+# ===== Fallback: ModemManager (compiled-in) =====
+CONFIG_PACKAGE_modemmanager=y
+CONFIG_PACKAGE_luci-proto-modemmanager=y
