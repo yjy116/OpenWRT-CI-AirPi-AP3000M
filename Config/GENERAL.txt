@@ -1,0 +1,48 @@
+# ===== LuCI base =====
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-base=y
+CONFIG_PACKAGE_luci-compat=y
+CONFIG_PACKAGE_luci-lib-jsonc=y
+CONFIG_PACKAGE_luci-app-opkg=y
+CONFIG_PACKAGE_luci-app-firewall=y
+CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-nlbwmon=y
+
+# ===== Common tools =====
+CONFIG_PACKAGE_bash=y
+CONFIG_PACKAGE_less=y
+CONFIG_PACKAGE_htop=y
+CONFIG_PACKAGE_watch=y
+CONFIG_PACKAGE_tcpdump=y
+CONFIG_PACKAGE_iperf3=y
+CONFIG_PACKAGE_bind-dig=y
+CONFIG_PACKAGE_mtr=y
+
+# ===== SSH (use openssh) =====
+CONFIG_PACKAGE_openssh-server=y
+CONFIG_PACKAGE_openssh-client=y
+CONFIG_PACKAGE_openssh-sftp-server=y
+
+# ===== CPE base (multi-modem) =====
+# USB serial/AT
+CONFIG_PACKAGE_kmod-usb-serial=y
+CONFIG_PACKAGE_kmod-usb-serial-option=y
+CONFIG_PACKAGE_kmod-usb-acm=y
+CONFIG_PACKAGE_atinout=y
+CONFIG_PACKAGE_picocom=y
+
+# MBIM
+CONFIG_PACKAGE_kmod-usb-net-cdc-mbim=y
+CONFIG_PACKAGE_umbim=y
+
+# QMI (for other CPE/modems)
+CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=y
+CONFIG_PACKAGE_uqmi=y
+
+# CDC Ethernet / RNDIS
+CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+CONFIG_PACKAGE_kmod-usb-net-rndis=y
+
+# usb-modeswitch (compat)
+CONFIG_PACKAGE_usb-modeswitch=y
+CONFIG_PACKAGE_usb-modeswitch-data=y
