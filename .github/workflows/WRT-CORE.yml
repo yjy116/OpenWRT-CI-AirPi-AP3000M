@@ -1,0 +1,38 @@
+name: WRT-CORE
+
+on:
+  workflow_call:
+    inputs:
+      target:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare deps
+        run: bash Scripts/01_prepare.sh
+
+      - name: Clone source
+        run: bash Scripts/02_clone.sh
+
+      - name: Add feeds
+        run: bash Scripts/03_feeds.sh
+
+      - name: Apply config
+        run: bash Scripts/04_config.sh
+
+      - name: Build
+        run: bash Scripts/05_build.sh
+
+      - name: Pack
+        run: bash Scripts/06_pack.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.target }}-firmware
+          path: openwrt/bin/targets/**/*
