@@ -1,0 +1,10 @@
+name: AirPi AP3000M
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-core:
+    uses: ./.github/workflows/WRT-CORE.yml
+    with:
+      target: mediatek_filogic_airpi_ap3000m
